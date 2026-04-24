@@ -1,14 +1,14 @@
-# Patent Query Prototype (Starter)
+# CS 294-184 Final Project Part 2: Programmatic Document Analysis for Patent Examination
 
-Starter scaffold for a CS294-style prototype that treats patent documents as structured, queryable objects.
+We design a programming-oriented document analysis environment where patent documents are treated as structured, queryable data. Instead of manual keyword search and scanning, examiners define reusable queries over document structure (sections, passages, metadata) to systematically retrieve and analyze relevant evidence.
 
 ## Repository Layout
 
 - `backend/` FastAPI + Python API, parser pipeline, query engine, DSL parser
-- `frontend/` React + Vite thin UI for selecting documents and running queries
+- `frontend/` React + Vite UI for running queries and viewing results
 - `docs/` MVP scope, architecture, and query examples
 
-## MVP Included
+## Current MVP
 
 - Document model: `Document -> Section -> Passage`
 - Parser for constrained raw patent inputs (`.txt` and text-extractable `.pdf`)
@@ -70,7 +70,7 @@ npm run dev:frontend
 section:SPECIFICATION AND contains:"signal processing"
 ```
 
-## Suggested First Milestones
+## Current Goals
 
 1. Parse one additional patent into structured JSON.
 2. Add `OR` support to the internal query model.
